@@ -1,0 +1,101 @@
+@media (max-width: 479px) {
+        .p-profiles .profile-head .c-history {
+                display: block;
+                float: none;
+                width: auto;
+                margin: 0;
+        }
+        .p-profiles .profile-head .c-history .b-block_list {
+                display: flex;
+                margin-top: -0.5em;
+                overflow-x: auto;
+        }
+        .p-profiles .profile-head .c-history .entry:nth-child(n) {
+                flex-shrink: 0;
+                min-width: 200px;
+                max-width: 260px;
+                padding: 0.5em;
+                margin: 0 0.5em 0 0;
+                border: 0;
+        }
+
+.p-profiles .profile-head .c-history .b-block_list::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+}
+@media (min-width: 481px) and (max-width: 767px) {
+        .b-block_list {
+                display: block;
+                width: 100%;
+                margin-top: 6px;
+                position: relative;
+                overflow: hidden;
+                height: 58px !important;
+        }
+        .p-profiles .profile-head .c-history .entry {
+                margin: 0;
+                position: relative;
+                display: block;
+                clear: both;
+                float: none;
+                width: 100% !important;
+                animation: history 4s steps(3, end) infinite !important;
+                box-shadow: none !important;
+        }
+        .p-profiles .profile-head .c-history .entry:first-child {
+                border-top: none;
+                margin-top: 0;
+                padding-top: 0;
+        }
+        .p-profiles .profile-head .c-history .entry .title {
+                width: auto;
+                animation: none !important;
+        }
+        .p-profiles .profile-head .c-history .entry .title,
+        .p-profiles .profile-head .c-history .entry .misc.date.unprocessed {
+                margin: 0 15%;
+        }
+        .p-profiles .profile-head .c-history .entry .title {
+                padding-top: 3px;
+        }
+        .p-profiles .profile-head .c-history .entry .misc.date.unprocessed {
+                width: auto;
+                display: block;
+        }
+        .p-profiles .profile-head .c-history .entry:first-child {
+                animation: animhist 5s ease-in-out infinite;
+                animation-delay: 2s;
+        }
+}
+@keyframes runningtext {
+        25% {
+                text-indent: -80em;
+        }
+        25.000000001% {
+                text-indent: 25em;
+        }
+        50% {
+                text-indent: 0;
+        }
+}
+@keyframes history {
+        0% {
+                transform: translateX(0);
+        }
+        100% {
+                transform: translateY(-205px);
+        }
+}
+@keyframes animhist {
+        0% {
+                display: block;
+        }
+        50% {
+                display: none;
+        }
+        100% {
+                display: block;
+        }
+}
